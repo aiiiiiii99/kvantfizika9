@@ -1,0 +1,17 @@
+mass=[0]
+otvet=[]
+for i in range(44):
+    if mass[i]%2==0:
+        mass.append(mass[i]+21)
+    else:
+        mass.append(mass[i]-1)
+def prost_chis(a):
+    sum=0
+    for i in range(2,a+1):
+        if a%i==0:
+            sum=sum+1
+    return sum
+for k in mass:
+    if prost_chis(k)==1:
+        otvet.append(k)
+print(otvet)
